@@ -21,3 +21,4 @@ jobs:
     - uses: ./
       with: 
         who-to-greet: workflows
+    - run: echo $GITHUB_EVENT_PATH
