@@ -7,5 +7,6 @@ jobs:
   run: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-    - run: echo Hi Hi
-      if: github.event.comment.body == 'Hi'
+    - run: cat $GITHUB_EVENT_PATH
+    - if: github.event.comment.body == 'Hi'
+      run: echo Hi Hi
