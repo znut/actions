@@ -1,0 +1,11 @@
+name: "pr-comment-2"
+on: # rebuild any PRs and main branch changes
+  issue_comment:
+    types: [created]
+
+jobs:
+  run: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo Hi Hi
+      if: github.comment.body == "Hi" 
