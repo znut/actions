@@ -1,10 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Nut Sornchumni'
+description: 'test'
+author: 'Nut Sornchumni'
 inputs:
-  myInput:              # change this
+  who-to-greet:              # change this
     description: 'input description here'
-    default: 'default value if applicable'
+    default: 'world'
 runs:
   using: 'node12'
   main: 'dist/index.js'
