@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo Hi Hi
-      if: github.comment.body == "Hi" 
+      if: github.comment.body == 'Hi'

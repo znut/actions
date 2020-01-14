@@ -7,7 +7,8 @@ jobs:
   run: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-    - run: cat $GITHUB_EVENT_PATH | jq '.comment.body' | if [ /dev/stdin == 'Hi' ] then echo ::set-output name=ok::true fi
+    - id: check
+      run: cat $GITHUB_EVENT_PATH | jq '.comment.body' | if [ /dev/stdin == 'Hi' ] then echo ::set-output name=ok::true fi
     - name: reply
-      if: inputs.name
+      if: steps.check.ok
       run: echo Hi hi
