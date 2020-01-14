@@ -1,6 +1,6 @@
 name: "pr-comment"
 on: # rebuild any PRs and main branch changes
-  pull_request_review_comment:
+  issue_comment:
     types: [created]
 
 jobs:
